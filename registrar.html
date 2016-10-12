@@ -4,36 +4,36 @@
 	<meta charset="UTF-8">
 	<title>Regitrar</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/registrar.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <div class="navbar-header text-center ">
-	      <h1>Sign up</h1>
+	    	<a href="index.html"><i class="icono glyphicon glyphicon-menu-left atras"></i></a>
+	      <h3 class="mt-12">Sign up</h3>
 	    </div>
 	  </div>
 	</nav>
 	<section>
 		<div class="container">
-		<div class="row">
-			<div class="col-xs-4">
-				<div class="form-group">
-			      <select class="selectpicker form-control">
-			        <option>Mustard</option>
-			        <option>Ketchup</option>
-			        <option>Relish</option>
-			      </select>
+			<div class="input-group">
+				<div class="input-group-btn">
+			        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/peru.png"><span class="caret"></span></button>
+			        <button type="button" class="btn btn-default h-46 " id="codigoPostal">+51</button>
+			        <ul class="dropdown-menu menu">
+			          <li><a class="p-13" href="#"><img src="img/argentina.png"></a></li>
+			          <li><a class="p-13"  href="#"><img src="img/brasil.png"></a></li>
+			          <li><a class="p-13"  href="#"><img src="img/colombia.png"></a></li>
+			          <li><a class="p-13"  href="#"><img src="img/chile.png"></a></li>
+			        </ul>
 			    </div>
-			</div>
-			<div class="col-xs-8">
-				
+		     	<input id="numeroTlf" type="text" maxlength="9" class="form-control h-46" aria-label="..." placeholder="1234567">
 			</div>
 		</div>
-		</div>
-		<a class="btn btn-default bg-btn" href="#">Next</a>
+		<a id="siguienteRegistrar" class="btn btn-default nextRegistrar" href="#">Next</a>
 	</section>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>

@@ -9,7 +9,7 @@
 	background-size: cover;
 }
 
-.container {
+.principal {
 	height: 100vh;
 	position: relative;
 	padding: 0;
@@ -18,10 +18,11 @@
 	width: 42%;
 	margin-top: 14%;
 }
-.btn {
+.btn-s {
 	background-color: transparent;
 	color: white;
-	font-size: 163%;
+	font-size: 138%;
+	padding: 10px 30px
 }
 .botones {
 	position: absolute;
@@ -30,4 +31,51 @@
 }
 .bg-btn {
 	background:  linear-gradient( 45deg, #EF0076 , #610B5E );
+	border: none;
+}
+.nextRegistrar {
+	background: #FF00BE;
+	position: absolute;
+    bottom: 0%;
+    width: 100%;
+    color: white;
+    padding: 14px;
+    font-size: 138%;	
+}
+.h-46 {
+	height: 46px;
+}
+.menu {
+	min-width: 67px;
+}
+.p-13 {
+	padding: 0 12px !important;
+}
+.icono {
+	position: absolute;
+	left: 10px;
+	top: 40%;
+}
+.mt-12 {
+	margin-top: 11px;
+}
+.atras {
+	color: black;
+}
+#codigoPostal {
+	border-right: none;
+}
+#numeroTlf {
+	border-left: none;
+}
+.inputNames {
+	padding: 0;
+}
+.name {
+	border:none;
+	width: 117px;
+    padding:4px 7px;
+}
+.h-40{
+	height: 40px;
 }
