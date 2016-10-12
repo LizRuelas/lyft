@@ -1,7 +1,7 @@
 *{
 	box-sizing: border-box;
     white-space: nowrap;
-    overflow: auto;
+
 }
 #portada {
 	background-image: url(../img/pista3.gif);
