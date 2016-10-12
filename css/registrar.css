@@ -7,3 +7,10 @@ img {
 .p-13 {
 	padding: 0 13px !important;
 }
+.bg-btn {
+	background: #FF00BE;
+	position: absolute;
+    bottom: 0%;
+    width: 100%;
+    color: white;	
+}
