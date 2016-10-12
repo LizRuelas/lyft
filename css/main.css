@@ -1,0 +1,22 @@
+.botones {
+	position: absolute;
+	bottom: 3%;
+	width: 100%;
+}
+.container {
+	height: 100vh;
+	position: relative;
+	padding: 0;
+	background-image: url(../img/pista3.gif);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#titulo {
+	width: 42%;
+	margin-top: 14%;
+}
+.btn {
+	background-color: transparent;
+	color: white;
+	font-size: 163%;
+}
