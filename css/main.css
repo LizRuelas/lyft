@@ -1,7 +1,6 @@
 *{
 	box-sizing: border-box;
     white-space: nowrap;
-
 }
 #portada {
 	background-image: url(../img/pista3.gif);
@@ -74,8 +73,14 @@
 .name {
 	border:none;
 	width: 117px;
-    padding:4px 7px;
+    padding:9px 7px;
 }
 .h-40{
 	height: 40px;
+}
+.w-10 {
+	width: 21%;
+    margin: 0 5.5px;
+    border: none;
+    border-bottom: 1px solid black;
 }
