@@ -16,20 +16,27 @@ $(document).ready(function() {
 			$("#siguienteRegistrar").removeAttr("href");
 		}
 	});
-});
-
-$("#siguienteRegistrar").click(generarCodigo);
+	$("#siguienteRegistrar").click(generarCodigo);
 
 function generarCodigo(){
 	var longitud = $("#numeroTlf").val().length;
 		if (longitud == 9) {
-			var random = Math.round(Math.random()*900)+99;
-			var codigo = "LAB" + random;
-			alert(codigo);
+			window.localStorage.setItem("codigo" , Math.round(Math.random()*900)+99);
+			var codigoRandom = "LAB" + window.localStorage.getItem("codigo");
+			alert(codigoRandom);
 		}
 }
-$("#siguienteValidarCodigo").click(registrar);
 
-function registrar(){
-	$("#siguienteValidarCodigo").attr("href" , "registrarDatos.html")
+$("#siguienteValidarCodigo").click(validarRandom);
+
+function validarRandom(){
+ var concatenarInput = $(".w-10").eq(0).val() + $(".w-10").eq(1).val() + $(".w-10").eq(2).val();
+ if (concatenarInput == window.localStorage.getItem("codigo")){
+ 	$("#siguienteValidarCodigo").attr("href" , "registrarDatos.html")
+ } else alert ("stef no jodas ");
 }
+
+
+
+});
+
