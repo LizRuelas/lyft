@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	$(".num").eq(0).focus();
+
 	$("#numeroTlf").keydown(function(evento) {
 		var ascii = evento.keyCode;
 		if (ascii == 8 || (ascii >= 48 && ascii <= 57) || (ascii >= 37 && ascii <=40)) {
@@ -33,9 +35,22 @@ function validarRandom(){
  var concatenarInput = $(".w-10").eq(0).val() + $(".w-10").eq(1).val() + $(".w-10").eq(2).val();
  if (concatenarInput == window.localStorage.getItem("codigo")){
  	$("#siguienteValidarCodigo").attr("href" , "registrarDatos.html")
- } else alert ("stef no jodas ");
+ } else alert ("codigo inavlido");
 }
 
+$(".num").keyup(siguienteFocus);
+
+function siguienteFocus(e){
+	var longitud = $(this).val().length;
+	if (longitud == 1 ){
+		$(this).next().focus();
+	}
+
+	var borrar = e.keyCode;
+	if(borrar == 8 ){
+		$(this).prev().focus();
+	}
+}
 
 
 });
