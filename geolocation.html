@@ -4,22 +4,45 @@
 	<meta charset="UTF-8">
 	<title>Geolocation</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-	<div id="mapa">
+	<ul id="slide-out" class="side-nav">
+    <li><div class="userView">
+      <img class="background " src="img/fondo-user.jpg">
+      <a href="#!user"><img class="circle" src="img/user.jpg"></a>
+      <a href="#!name"><span class="white-text fs-16">Mercedes</span></a>
+      <a href="view-profile.html"><span class="white-text fs-12">view profile</span></a>
+    </div></li>
+    <li class="m-5"><a href="#!"><i class="material-icons">room</i>Home</a></li>
+    <li><div class="divider"></div></li>
+    <li><a href="#!"><i class="material-icons">redeem</i>Free Rides</a></li>
+    <li><div class="divider"></div></li>
+    <li><a href="#!"><i class="material-icons">restore</i>Ride History</a></li>
+    <li><div class="divider"></div></li>
+    <li><a href="#!"><i class="material-icons">payment</i>Payment</a></li>
+    <li><div class="divider"></div></li>
+    <li><a href="#!"><i class="material-icons">live_help</i>Help</a></li>
+    <li><div class="divider"></div></li>
+    <li><a href="#!"><i class="material-icons">settings</i>Settings</a></li>
+    <li><div class="divider"></div></li>
+    <li class="sign-drive"><a href="#!"><i class="material-icons ">live_help</i>Sign up to drive</a></li>
+  </ul>
+  <a  href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons user">account_circle</i></a>
+
+  <div id="mapa">
 	</div>
-	<i class="material-icons user">account_circle</i>
+	
 	<img class="logo" src="img/logo2.png">
 	<input type="text" id="ubicacion" name="">
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7pnWp07oI_JERxWMBtNJ3WeGJa0wnQKc"
-    async defer></script>
+    async defer></script>  
 	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 	<script type="text/javascript" src="js/geolocation.js"></script>
 </body>
 </html>

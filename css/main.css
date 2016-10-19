@@ -92,8 +92,8 @@ a {
 	height: 40px;
 }
 .w-10 {
-	width: 19%;
-    margin: 0 5.5px;
+	width: 18%;
+    margin: -1px 4.5px;
     border: none;
     border-bottom: 1px solid black;
 }
@@ -102,10 +102,7 @@ a {
 	border-bottom: 1px solid black !important;	
 }
 .lab {
-    position: relative;
-    left: 15px;
-    bottom: -4px;
-    font-weight: bolder;
+    margin-left: 60%;
     font-size: 16px;
 }
 #numeroTlf:focus{
@@ -116,6 +113,9 @@ input:focus {
 	outline:none !important;
 	box-shadow: none!important;
 }
+.pl-0 {
+	padding-left: 0px;
+}
 
 .mt-28 {
     margin-top: 28px;
@@ -123,8 +123,12 @@ input:focus {
 .mt-14 {
 	margin-top: 14px;
 }
-.fs-21 {
+#btn-resend {
 	font-size: 21px;
+}
+#btn-resend:focus {
+	background-color: white !important;
+	outline:none !important;
 }
 
 #mapa {
@@ -144,6 +148,7 @@ input:focus {
 	top: 2%;
 	left: 4%;
 	font-size: 58px;
+	color: black;
 }
 #ubicacion {
 	position: absolute;
@@ -152,3 +157,23 @@ input:focus {
 	bottom: 8%;
 	width: 69%;
 }
+.mt-70 {
+	margin-top: 70px;
+}
+
+.fs-16 {
+	font-size: 16px;
+}
+.fs-12 {
+	font-size: 12px;
+}
+
+.m-5 {
+	margin: -5px 0;
+}
+.sign-drive {
+	color: white;
+	background-color: #72809A;
+}
+
+
