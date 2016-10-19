@@ -27,7 +27,7 @@ function generarCodigo(){
 			alert(codigoRandom);			
 }
 function generarTelefono(){
-	window.localStorage.setItem("telefono" , valorTelefono)
+	window.localStorage.setItem("telefono" , $("#numeroTlf").val() )
 }
 
 $("#siguienteValidarCodigo").click(validarRandom);
