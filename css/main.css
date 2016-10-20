@@ -175,11 +175,29 @@ input:focus {
 	color: white;
 	background-color: #72809A;
 }
-.user2 {
-	width:100%;
-}
 
 .ubi{
 	border: 1px solid gray !important;
 	height: 30px !important;
+}
+
+.user2 {
+	width:100%;
+	position: absolute;
+	z-index: 2;
+}
+.relative-3 {
+	position: relative;
+	z-index: 3;
+}
+.relative-top {
+	position: relative;
+	z-index: 1;
+	top: 175px;
+}
+#boton {
+	float: right;
+}
+#foto {
+	display: none !important;
 }

@@ -13,6 +13,10 @@ $(document).ready(function() {
 	$("validarCodigo.html").ready(mostrarNumeroTlf);
 	$("#nextRegistrarDatos").click(validarNamesEmail);
 	$("view-profile.html").ready(mostrarNombre);
+	
+
+
+
 
 	function keyNumeros(evento){
 		var ascii = evento.keyCode;
@@ -88,8 +92,8 @@ $(document).ready(function() {
 
 	function validarNamesEmail(){
 		// A-Z para nombres y apellidos
-		var regexNombre = /^[a-zñáéíóú]+$/gi;
-		var regexApellido = /^[a-zñáéíóú]+$/gi;
+		var regexNombre = /^[a-zñáéíóú\s{0,2}]+$/gi;
+		var regexApellido = /^[a-zñáéíóú\s{0,2}]+$/gi;
 		var regexCorreo = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 
 		var nombre = $("#nombre").val();
@@ -99,6 +103,8 @@ $(document).ready(function() {
 		var nombreValido = false;
 		var apellidoValido = false;
 		var correoValido = false;
+		var checkboxActivado = $("#checkbox").is(':checked');
+
 
 		if (!regexNombre.test(nombre)) {
 			alert("Ingresa un nombre válido");
@@ -119,9 +125,9 @@ $(document).ready(function() {
 			alert("ingrese min 5 y max 50 caracteres en el correo")
 		} else correoValido = true ; 
 
-		if(nombreValido == true && apellidoValido == true && correoValido==true ){
+		if(nombreValido == true && apellidoValido == true && correoValido==true && checkboxActivado ){
 			$("#nextRegistrarDatos").attr("href" , "geolocation.html")
-		}
+		} else alert ("aceptar las condiciones");
 
 		window.localStorage.setItem("nombreGuardado" , nombre);
 		 
@@ -130,6 +136,44 @@ $(document).ready(function() {
 	function mostrarNombre(){
 		$("#nameMostrar").text(window.localStorage.getItem("nombreGuardado"));
 	}
+
+	$("#boton").click(subirFoto);
+	$("#foto").change(mostrarFoto);
+
+    function subirFoto(){
+    	$("#foto").click();
+    }
+
+	function mostrarFoto(){
+    	inputFoto($(this));
+    }
+
+    function inputFoto(){
+    	if ($(this).files && $(this).files) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('.user2').attr('src', e.target.result);
+            localStorage.setItem("imagen", e.target.result)
+        }
+        reader.readAsDataURL($(this).files[0]);
+    }	
+    }
+
+    if(localStorage.getItem("imagen") != null){
+		if(location.href.includes("view-profile.html")){
+			$(".user2").attr("src",localStorage.getItem("imagen"));
+		}
+	}
+
+    
+    
+   
+
+
+	
+
+
+
 
 
 });
