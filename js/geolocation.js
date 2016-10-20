@@ -3,6 +3,8 @@ var cargarPagina = function() {
 		// también se puede usar if ("geolocation" in navigator) {}
 		navigator.geolocation.getCurrentPosition(funcionExito, funcionError);
 	}
+
+    $("#nameRegistrado").text(window.localStorage.getItem("nombreGuardado"));
 };
 
 var funcionExito = function(posicion) {
@@ -52,6 +54,7 @@ var funcionError = function (error) {
 	console.log(error);
 };
 
+
 $(document).ready(cargarPagina);
 $(".button-collapse").sideNav({
       menuWidth: 220, // Default is 240
@@ -59,3 +62,4 @@ $(".button-collapse").sideNav({
       closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
     }
   );
+
