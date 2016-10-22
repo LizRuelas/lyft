@@ -137,44 +137,7 @@ $(document).ready(function() {
 		$("#nameMostrar").text(window.localStorage.getItem("nombreGuardado"));
 	}
 
-	$("#boton").click(subirFoto);
-	$("#foto").change(mostrarFoto);
-
-    function subirFoto(){
-    	$("#foto").click();
-    }
-
-	function mostrarFoto(){
-    	inputFoto($(this));
-    }
-
-    function inputFoto(){
-    	if ($(this).files && $(this).files) {
-        var reader = new FileReader();
-        reader.onload = function (e) {
-            $('.user2').attr('src', e.target.result);
-            localStorage.setItem("imagen", e.target.result)
-        }
-        reader.readAsDataURL($(this).files[0]);
-    }	
-    }
-
-    if(localStorage.getItem("imagen") != null){
-		if(location.href.includes("view-profile.html")){
-			$(".user2").attr("src",localStorage.getItem("imagen"));
-		}
-	}
-
-    
-    
-   
-
-
 	
-
-
-
-
 
 });
 

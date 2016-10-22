@@ -5,7 +5,9 @@ var cargarPagina = function() {
 	}
 
     $("#nameRegistrado").text(window.localStorage.getItem("nombreGuardado"));
+     
 };
+var map;
 
 var funcionExito = function(posicion) {
 	var lat = posicion.coords.latitude;
@@ -18,10 +20,10 @@ var funcionExito = function(posicion) {
 	    mapTypeId:google.maps.MapTypeId.ROADMAP,
 	    mapTypeControl:false,
 	    navigationControlOptions:{
-	    	style: google.maps.NavigationControlStyle.SMALL
+	    style: google.maps.NavigationControlStyle.SMALL
 	   	}
     };
-    var map = new google.maps.Map(document.getElementById('mapa'), myOptions);
+    map = new google.maps.Map(document.getElementById('mapa'), myOptions);
 
     var marker = new google.maps.Marker({
     	position:latlon,
@@ -47,8 +49,7 @@ var funcionExito = function(posicion) {
     $("#ubicacion").val(dir);
     });
 };
-
-
+ 
 
 var funcionError = function (error) {
 	console.log(error);
@@ -62,4 +63,12 @@ $(".button-collapse").sideNav({
       closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
     }
   );
+
+$("#btn-search").click(buscarDireccion); 
+
+function buscarDireccion(){
+    alert("hola");
+}
+
+  
 
