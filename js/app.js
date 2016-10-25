@@ -13,10 +13,11 @@ $(document).ready(function() {
 	$("validarCodigo.html").ready(mostrarNumeroTlf);
 	$("#nextRegistrarDatos").click(validarNamesEmail);
 	$("view-profile.html").ready(mostrarNombre);
+	$("#elegirFoto").change(previewFile);
+	$("#btn-guardarCambios").click(guardarCambios);
+	$("view-profile.html").ready(mostrarCambios);
+	$("editarPerfil.html").ready(mostrarNombre);
 	
-
-
-
 
 	function keyNumeros(evento){
 		var ascii = evento.keyCode;
@@ -77,7 +78,7 @@ $(document).ready(function() {
 		}
 	}
 
-	function soloNumerosCodigo(){
+	function soloNumerosCodigo(evento){
 		var ascii = evento.keyCode;
 		if (ascii == 8 || (ascii >= 48 && ascii <= 57) || (ascii >= 37 && ascii <=40)) {
 			return true;
@@ -135,9 +136,53 @@ $(document).ready(function() {
 
 	function mostrarNombre(){
 		$("#nameMostrar").text(window.localStorage.getItem("nombreGuardado"));
+		$("#nombre2").val(window.localStorage.getItem("nombreGuardado"));
 	}
 
-	
+	function previewFile() {
+	  var preview = document.querySelector('img');
+	  var file    = document.querySelector('input[type=file]').files[0];
 
+	  var reader  = new FileReader();
+	  reader.onload = function () {
+
+	   preview.src = reader.result;
+	   var listo = $("#foto").attr("src");
+	   
+	  window.localStorage.setItem("fotoGuardado" , listo);
+	  }
+
+	  if (file) {
+	    reader.readAsDataURL(file);
+
+	  } else {
+	    preview.src = "";
+	  }
+
+	  
+		
+	}
+	
+	function guardarCambios(){
+		var nombre2 = $("#nombre2").val();
+		var casa = $("#casa").val();
+		var musica = $("#musica").val();
+		var hobbie = $("#hobbie").val();
+		
+
+		window.localStorage.setItem("nombreGuardado" , nombre2);
+		window.localStorage.setItem("casaGuardado" , casa);
+		window.localStorage.setItem("musicaGuardado" , musica);
+		window.localStorage.setItem("hobbieGuardado" , hobbie);
+		
+	}
+	function mostrarCambios(){
+		$("#nameMostrar").text(window.localStorage.getItem("nombreGuardado"));
+		$("#casaMostrar").text(window.localStorage.getItem("casaGuardado"));
+		$("#musicaMostrar").text(window.localStorage.getItem("musicaGuardado"));
+		$("#hobbieMostrar").text(window.localStorage.getItem("hobbieGuardado"));
+		$(".user2").attr("src" , window.localStorage.getItem("fotoGuardado"));
+	}
 });
 
+2
