@@ -182,7 +182,7 @@ $(document).ready(function() {
 		$("#musicaMostrar").text(window.localStorage.getItem("musicaGuardado"));
 		$("#hobbieMostrar").text(window.localStorage.getItem("hobbieGuardado"));
 		$(".user2").attr("src" , window.localStorage.getItem("fotoGuardado"));
+		$(".user2").addClass("user2");
 	}
 });
 
-2

@@ -5,6 +5,8 @@ var cargarPagina = function() {
 	}
 
     $("#nameRegistrado").text(window.localStorage.getItem("nombreGuardado"));
+
+    $(".circle").attr ("src" ,window.localStorage.getItem("fotoGuardado"));
      
 };
 var map;
